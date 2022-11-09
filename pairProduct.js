@@ -18,6 +18,7 @@ const pairProduct = (numbers, targetProduct) => {
 
       //if it does not hit our conditional, we add the current iteration into our hashmap.
       visited[num] = i
+      console.log(visited)
     }
   };
 
