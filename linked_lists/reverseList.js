@@ -39,6 +39,14 @@ const reverseList = (head) => {
   return prev;
 };
 
+//recursive way. however, we give up space in order to run this recursively.
+// const reverseList = (head, prev = null) => {
+//   if (head === null) return prev;
+//   const next = head.next;
+//   head.next = prev;
+//   return reverseList(next, head);
+// };
+
 
 
 
