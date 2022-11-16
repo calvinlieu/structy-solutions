@@ -26,11 +26,11 @@ const reverseList = (head) => {
 
   //we run the typical node traversal when the current node does not equal to null
   while (current !== null) {
-    // we create a next variable that holds our next node
+    // we create a temp next variable that holds our next node
     let next = current.next;
     // we then point our next node to our prev variable. 
     current.next = prev;
-    // assign our prev to the current node
+    // assign our prev to the old current node
     prev = current;
     // we shift our current to our next node to continue the traversal
     current = next;
