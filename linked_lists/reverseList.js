@@ -30,7 +30,7 @@ const reverseList = (head) => {
     let next = current.next;
     // we then point our next node to our prev variable. 
     current.next = prev;
-    // assign our prev to the old current node
+    // assign our prev to the current node
     prev = current;
     // we shift our current to our next node to continue the traversal
     current = next;

@@ -3,7 +3,7 @@ const zipperLists = (head1, head2) => {
   //start off our new list at head1;
   let head = head1;
 
-
+  //we assigned curr1 and curr2 to each linked list. we start curr1 at head1.next because we have a head node initiated.
   let curr1 = head1.next;
   let curr2 = head2;
 
