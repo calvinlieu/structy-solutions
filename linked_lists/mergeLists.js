@@ -6,12 +6,16 @@ class Node {
 }
 
 const mergeLists = (head1, head2) => {
+  // we create a new node to hold our new LL;
   const dummy = new Node(null);
+  //create a variable that holds the head of the new LL;
   let head = dummy;
+
   let curr1 = head1;
   let curr2 = head2;
-
+// while both LLs are not null
   while (curr1 !== null && curr2 !== null) {
+    // if the value of node 1 is less than node 2, we will point the next node to node 1, else we point it to node 2.
     if (curr1.val < curr2.val) {
       head.next = curr1;
       curr1 = curr1.next;
@@ -19,12 +23,14 @@ const mergeLists = (head1, head2) => {
       head.next = curr2;
       curr2 = curr2.next;
     }
-
+    //traverse to the next node;
     head = head.next;
   }
+  //if either nodes are not null after the traversal, we will point the LL to the rest of the other LL.
   if (curr1 !== null) head.next = curr1;
   if (curr2 !== null) head.next = curr2;
 
+  //return the next head of the dummy LL because the head of the LL is null;
   return dummy.next;
 };
 
