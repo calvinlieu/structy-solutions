@@ -20,14 +20,15 @@ const longestStreak = (head) => {
       currCount = 1;
     }
 
+    //reassign our prev value to the current node's value before we traverse to the next node.
+    prev = current.val;
+    current = current.next;
+
     //if the current count is greater than our max count then we replace max count with the current count;
     if (currCount > maxCount) {
       maxCount = currCount;
     }
 
-    //reassign our prev value to the current node's value before we traverse to the next node.
-    prev = current.val;
-    current = current.next;
   }
 
   return maxCount;
