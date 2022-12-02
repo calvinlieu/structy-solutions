@@ -3,14 +3,14 @@ const addLists = (head1, head2) => {
   let dummyHead = new Node(null);
   //make a current variable
   let current = dummyHead;
-  //carry variable is used to hold values that are over 10;
+  //carry indicates whether or not we need to carry a 1 over to our next node's value.
   let carry = 0;
   let current1 = head1;
   let current2 = head2;
 
   //classic while loop where we check if all LLs are not null
   while (current1 !== null || current2 !== null || carry !== 0) {
-    //this checks to see if any of our LLs have more nodes than the other.
+    //if the current node is null and the other one still has values, we set it to 0 so that we can add both nodes.
     const val1 = current1 === null ? 0 : current1.val;
     const val2 = current2 === null ? 0 : current2.val;
     //sum is used to get the sum of the current index in each LL;
