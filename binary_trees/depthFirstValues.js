@@ -30,19 +30,17 @@
 //   return result;
 // };
 
-
 //recursive version
-const depthFirstValues = (root) => {
-    //base case
-    if (root === null) return [];
-    
-    //we grab all of the values through our recursive calls
-    const leftValues = depthFirstValues(root.left);
-    const rightValues = depthFirstValues(root.right);
-    
-    //we return the root which is the first value, then a spread of our left values then right values
-    return [root.val, ...leftValues, ...rightValues]
-    
-  };
+// const depthFirstValues = (root) => {
+//     //base case
+//     if (root === null) return [];
 
+//     //we grab all of the values through our recursive calls
+//     const leftValues = depthFirstValues(root.left);
+//     const rightValues = depthFirstValues(root.right);
+
+//     //we return the root which is the first value, then a spread of our left values then right values
+//     return [root.val, ...leftValues, ...rightValues]
+
+//   };
 
