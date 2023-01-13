@@ -26,6 +26,3 @@ const anagrams = (s1, s2) => {
 };
 
 //time and space complexity: o(n + m) where n and m are the length of the input strings. Space: o(n) since we are only using a hash map.
-
-
-  console.log(anagrams('restful', 'fluster')); // -> true)
