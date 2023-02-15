@@ -20,15 +20,11 @@
 
 
 
-//recursive way
 const treeMinValue = (root) => {
-  //we check if the tree is empty to have as a default value.
   if (root === null) return Infinity;
-
-  //we make our recursive calls on both left and right child. these will give us back the smallest value.
-  const leftMin = treeMinValue(root.left);
-  const rightMin = treeMinValue(root.right);
-
-  //we run math.min on all of our values which will return us the smallest value.
-  return Math.min(root.val, leftMin, rightMin);
+  
+  let leftMin = treeMinValue(root.left);
+  let rightMin = treeMinValue(root.right);
+  
+  return Math.min(root.val, leftMin, rightMin)
 };
