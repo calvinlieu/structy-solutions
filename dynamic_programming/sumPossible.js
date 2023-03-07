@@ -13,3 +13,7 @@ const sumPossible = (amount, numbers, memo = {}) => {
   memo[amount] = false;
   return false;
 };
+
+
+// O(a * n) time
+//O(a) space
